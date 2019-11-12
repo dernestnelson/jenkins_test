@@ -1,0 +1,1 @@
+if not exist testTest (mkdir testTest && echo "buildin...") else (rmdir testTest && echo "destroying..")
