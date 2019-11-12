@@ -1,5 +1,5 @@
 pipeline {
-    agent { label { image 'node:6.3' } } 
+    agent any
     stages {
         stage('build') {
             steps {
