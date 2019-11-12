@@ -4,13 +4,13 @@ pipeline {
         stage('make file') {
             steps {
                 bat 'cd C:\\Users\\daven\\test'
-                bat 'echo.>"C:\\Users\\daven\\test\\hello.txt"'
+                bat 'echo hello >"C:\\Users\\daven\\test\\hello.txt"'
             }
         }
         stage('scp file into server') {
             steps {
                 bat 'cd C:\\Users\\daven\\Downloads'
-                bat 'scp C:\\Users\\daven\\test\\hello.txt ubuntu@ec2-18-221-83-104.us-east-2.compute.amazonaws.com:/home/ubuntu/test'
+                bat 'scp C:\\Users\\daven\\test\\hello.txt ec2-user@ec2-18-188-243-147.us-east-2.compute.amazonaws.com:/home/ec2-user/test'
             }
         }
         stage('celebrate') {
