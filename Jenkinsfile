@@ -4,7 +4,7 @@ pipeline {
         stage('make file') {
             steps {
                 bat 'cd C:\\Users\\daven\\test'
-                bat 'type "hello" > hello.txt'
+                bat 'echo.>"C:\\Users\\daven\\test\\hello.txt"'
             }
         }
         stage('scp file into server') {
